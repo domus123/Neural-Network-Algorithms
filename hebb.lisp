@@ -1,5 +1,5 @@
 (defparameter *parameter-lst* nil)
-(defparameter *weigth* nil) 
+(defparameter *weight* nil) 
 (defparameter *linear* 0 )
 
 
@@ -18,36 +18,36 @@
     b))
 	
 
-(defun get-weigth (train-data n)
+(defun get-weight (train-data n)
   (gen-parameter n)
-  (let ( (weigth (make-list  n :initial-element 0)))
+  (let ( (weight (make-list  n :initial-element 0)))
     (loop for data-level in train-data
 	  do
 	    (loop for i below (- n 1)
 		  do
-		  (setf (nth i weigth) (+ (nth i weigth) (* (nth i data-level)
+		  (setf (nth i weight) (+ (nth i weight) (* (nth i data-level)
 							    (nth (- n 1) data-level))) )))
-    (setf *weigth* weigth)
-    (setf (car (last *weigth*)) (get-b train-data)))
-  *weigth*)
+    (setf *weight* weight)
+    (setf (car (last *weight*)) (get-b train-data)))
+  *weight*)
 
 (defun net (lst  n )
-  (let ( (class (car (last *weigth*)) ))
+  (let ( (class (car (last *weight*)) ))
     (loop for i below n 
 	  do
 	    (setf class (+ class (* (nth i lst)
-				    (nth i *weigth*)) )))
+				    (nth i *weight*)) )))
 	  class))
 
 
 (defun train (data input-size)
-  (setf *weigth* nil)
-  (if (get-weigth data input-size) (format nil "Sucessfull trained")
+  (setf *weight* nil)
+  (if (get-weight data input-size) (format nil "Sucessfull trained")
     (format nil "Erro training")))
 
 
 (defun run (input-lst)
-  (let ( (n (1- (length *weigth*)) ))
+  (let ( (n (1- (length *weight*)) ))
     (if (>= (net input-lst n) *linear*)
 	1
       0
