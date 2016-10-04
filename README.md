@@ -7,7 +7,7 @@
 
 #How to use
 
-<h4> HEBB <\h4> 
+<h4> HEBB </h4> 
 * (load "hebb.lisp")
 * (train '( (-1 -1 -1) (-1 1 -1) (1 -1 -1) (1 1 1)) 3)	
 <p> How this work
@@ -18,7 +18,7 @@
 * The weight resulted by the algorithm can be acessed calling the variable *weight*
 * (run '(-1 -1))-> Will run the algorithm after the training of the neural network.
 
-<h4> Perceptron <\h4>
+<h4> Perceptron </h4>
 *  (load "perceptron")
 *  (train)
 *  (check '(1 1 1 1))
@@ -30,10 +30,10 @@
 #Details
 
 
-<h4> Hebb <\h4> 
+<h4> Hebb </h4> 
 * Can be passed list with N number of inputs
 * The algorithm is just a Hebb Algorithm implementation, soo, will not be precise as it should be.
-<h4> Perceptrons <\h4>
+<h4> Perceptrons </h4>
 *Is just a sample of perceptrons impremented in Common Lisp .
 <p> 
 * Any doubt or bugs you can send me a email. 
