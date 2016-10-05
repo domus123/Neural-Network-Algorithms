@@ -53,7 +53,7 @@
 		     t
 		   (progn (new-weight (nth i *input*) (nth i *outputs*))
 			  (setf changed 1 ))) ))
-    (if (equal changed 0 ) (format nil "Treinado com sucesso!~%Numero de iteracoes ~a" count )
+    (if (equal changed 0 ) (format nil "Sucessfull Trained!~%Iterations~a" count )
         (train (+ 1 count ))) ))
        
 (defun test (lst)
