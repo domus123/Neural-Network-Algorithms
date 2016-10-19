@@ -8,8 +8,10 @@
 #How to use
 
 <h4> HEBB </h4> 
-* (load "hebb.lisp")
-* (train '( (-1 -1 -1) (-1 1 -1) (1 -1 -1) (1 1 1)) 3)	
+```lisp
+  (load "hebb.lisp")
+  (train '( (-1 -1 -1) (-1 1 -1) (1 -1 -1) (1 1 1)) 3)	
+```
 <p> How this work
 <p> Train get a list, this list represent the true table of the circuit
 <p> -1 means 0 and 1 means 1
@@ -19,10 +21,11 @@
 * (run '(-1 -1))-> Will run the algorithm after the training of the neural network.
 
 <h4> Perceptron </h4>
-*  (load "perceptron")
-*  (train)
-*  (check '(1 1 1 1))
-
+```lisp
+  (load "perceptron")
+  (train)
+  (check '(1 1 1 1))
+```
 <p> This algorithm was a simple perceptron with only 4 weight.
 <p> Just a sample of how to implement a perceptron in Common Lisp.
 
