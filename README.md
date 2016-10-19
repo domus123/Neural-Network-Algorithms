@@ -18,8 +18,9 @@
 <p> The next function input is the size of each list
 <p> That means, all the inputs + output (0 0 1) -> 3
 * The weight resulted by the algorithm can be acessed calling the variable *weight*
-* (run '(-1 -1))-> Will run the algorithm after the training of the neural network.
-
+```lisp
+(run '(-1 -1)) ;; Will run the algorithm after the training of the neural network.
+```
 <h4> Perceptron </h4>
 ```lisp
   (load "perceptron")
