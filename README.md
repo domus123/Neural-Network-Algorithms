@@ -1,6 +1,6 @@
 #Neural Logic
 * Hebb Algorithm and Perceptrons implemented for Robotic Class.  
-* This was writted in Common Lisp.
+* This was writted mostly in Common Lisp.
 * Created by Lucas Guerra.
 * Contact lu.guerra7508@gmail.com .
 
